@@ -28,6 +28,12 @@ variable "environment" {
   description = "(Required) Environment of all resources"
 }
 
+variable "instance_tags" {
+  type = map(string)
+  description = "A map of tags to apply to the EC2 instances in the autoscaling group."
+  default = {}
+}
+
 variable "instance_type" {
   type        = string
   description = "Instance type for Autoscale group"
